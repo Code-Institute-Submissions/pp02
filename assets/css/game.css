@@ -1,9 +1,9 @@
-body{
+body {
     color: #fff;
 }
 
 /* Answer button styling*/
-.choice-container{
+.choice-container {
     display: flex;
     margin-bottom: 0.8rem;
     width: 100%;
@@ -11,4 +11,38 @@ body{
     background: rgb(10, 93, 255);
     font-size: 3rem;
     min-width: 80rem;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
+    transform: scale(1.02);
+    transition: transform 100ms;
+
+}
+
+.choice-prefix{
+    padding: 2rem 2.5rem;
+    color: #fff;
+}
+
+.choice-text{
+    padding:2rem;
+    width:100%
+}
+/* Correcr/Incorrect answer styling*/
+.correct{
+    background: linear-gradient(32deg, rgb(11,223,36) 0%, rgb(41,232,111)100%);
+}
+.incorrect{
+    background: linear-gradient(32deg, rgb(230,29,29) 0%, rgb(224,11,11)100%);
+}
+
+/* Media Query*/
+
+@media  screen and (max-width: 768px){
+    .choice-container{
+        min-width: 40rem;
+    }
+    
 }
