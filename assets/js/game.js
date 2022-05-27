@@ -113,8 +113,8 @@ choices.forEach(choice => {
     })
 })
 //increasing score
-incrementScore = num =>{
-    score +=num
+incrementScore = num => {
+    score += num
     scoreText.innerText = score
 }
 //calling startGame function
