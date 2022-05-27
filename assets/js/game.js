@@ -10,6 +10,7 @@ let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
+//questions
 let questions = [
     {
     question: 'The Panama Canal was officially opened by which US president?',
@@ -53,3 +54,22 @@ let questions = [
 }
 
 ]
+
+const SCORE_POINTS = 100
+const MAX_QUESTIONS = 5
+
+//starting game and setting question counter/score to 0
+startGame = () => {
+    questionCounter = 0
+    score = 0
+    availableQuestions = [...questions]
+    getNewQuestion()
+}
+//saving score locally
+getNewQuestion = () => {
+    if(availableQuestions.length == 0 || questionCounter > MAX_QUESTIONS){
+        localStorage.setItem('mostRecentScore', score)
+
+        return window.location.assign('/end.html')
+    }
+}
