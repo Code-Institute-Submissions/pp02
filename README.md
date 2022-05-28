@@ -43,7 +43,8 @@ Once the user has finished the quiz they will be directed to the end page. From 
  # Testing
 
 ## User Testing
-
+    - When hosting on github pages all of the internal links returned a 404 error. This was due to relative paths. Adding the repo name to the paths resolved this issue.
+    -The HighScore orginially didn't work. This was due to using the query selector method for this statement by mistake. Once it was corrected the issue was resolved.
 
 
  ## Validator Testing
